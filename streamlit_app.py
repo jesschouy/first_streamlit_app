@@ -31,7 +31,6 @@ def get_fruityvice_data(this_fruit_choice):
     return streamlit.dataframe(fruityvice_normalized)
 
 
-streamlit.header("The fruit load list contains:")
 
 # New Section to display fruityvice api response
 streamlit.header('Fruityvice Fruit Advice!')
@@ -46,8 +45,13 @@ try:
         
 except URLError as e:
     streamlit.error()
+    
+    
 
 
+
+
+streamlit.header("The fruit load list contains:")
 # Snowflake related functions
 #def get_fruit_load_list():
 #    with my_cnx.cursor() as my_cur:
